@@ -19,7 +19,7 @@ const Step3=({setStep})=>{
         
 
     return (
-        <div>
+        <div id="step3">
             <h1>Card Details</h1>
             <form onSubmit={handleSubmit}>
                 <label>Card Number:</label>

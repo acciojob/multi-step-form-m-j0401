@@ -12,7 +12,7 @@ let one={
  let {first,last}=one;
 
     return (
-        <div>
+        <div id="step2">
             <h1>Car Details</h1>
             <form onSubmit={((e)=>{ e.preventDefault();  if(!first.current.value && !last.current.value) return; setStep(3)})}>
                 <label>Brand:</label>

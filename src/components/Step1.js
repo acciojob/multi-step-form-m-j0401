@@ -19,7 +19,7 @@ const Step1=({setStep})=>{
  }
 
     return (
-        <div>
+        <div id="step1">
             <h1>Customer Details</h1>
   <form onSubmit={handleSubmit}>
                 <label>First Name:</label>
