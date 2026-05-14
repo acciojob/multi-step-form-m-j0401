@@ -15,13 +15,13 @@ const Step1=({setStep})=>{
 
  function handleSubmit(e){
     e.preventDefault();
-    if(!first.current.value && !last.current.value)
+    if(!first.current.value || !last.current.value)
         { return;}
     setStep(2)
  }
    return   <div id="step1">
             <h1>Customer Details</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
                 <label>First Name:</label>
                 <br/>
                 <input type="text" id="first_name" ref={first}/>
@@ -30,7 +30,7 @@ const Step1=({setStep})=>{
                 <br/>
                 <input type="text" id="last_name" ref={last}/>
                 <br/>
-                <button type="submit">Submit</button>
+                <button type="button" onClick={handleSubmit}>Submit</button>
             </form>
   
         </div>

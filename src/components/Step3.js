@@ -12,7 +12,7 @@ const Step3=({setStep})=>{
     let {num,expiry}=sec
     function handleSubmit(e){
         e.preventDefault();
-        if(!num.current.value && !expiry.current.value)
+        if(!num.current.value || !expiry.current.value)
           {  return}
 
         }
