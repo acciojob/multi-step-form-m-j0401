@@ -13,7 +13,7 @@ const Step3=({setStep})=>{
     function handleSubmit(e){
         e.preventDefault();
         if(!num.current.value && !expiry.current.value)
-            return
+          {  return}
 
         }
         
