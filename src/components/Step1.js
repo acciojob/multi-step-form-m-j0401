@@ -3,8 +3,9 @@ import React, { useRef,useState} from "react";
 
 
 
-const Steps=({step,setStep})=>{
-      let [step,setStep]=useState(1)
+const Steps=()=>{
+
+let [step,setStep]=useState(1)
     
  let one={
     first:useRef(),
@@ -33,7 +34,8 @@ const Steps=({step,setStep})=>{
         { return;}
     setStep(2)
  }
-   return       step==1 &&   <div id="step1"> 
+   return    <>
+   {  step==1 &&   <div id="step1"> 
             <h1>Customer Details</h1>
       <form>
                 <label>First Name:</label>
@@ -48,8 +50,9 @@ const Steps=({step,setStep})=>{
             </form>
   
         </div>
+}
 
-         step==2 && <div id="step2">
+      { step==2 && <div id="step2">
             <h1>Car Details</h1>
             <form  id= "step2" onSubmit={((e)=>{ e.preventDefault();  if(!first.current.value || !last.current.value) return; setStep(3)})}>
                 <label>Brand:</label>
@@ -64,8 +67,8 @@ const Steps=({step,setStep})=>{
                 <button type="submit">Next</button>
 
             </form>
-        </div>
-    step==3 &&  <div id="step3" style={{display:block}}>
+        </div> }
+   {  step==3 &&  <div id="step3" >
             <h1>Card Details</h1>
             <form onSubmit={handleSubmitt}>
                 <label>Card Number:</label>
@@ -81,8 +84,9 @@ const Steps=({step,setStep})=>{
 
             </form>
         </div>
-
-
+}
+   
+</>
     
 }
 
