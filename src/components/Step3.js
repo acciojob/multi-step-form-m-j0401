@@ -10,7 +10,7 @@ const Step3=({setStep})=>{
         expiry:useRef()
     }
     let {num,expiry}=sec
-    function handleSubmit(e){
+    function handleSubmitt(e){
         e.preventDefault();
         if(!num.current.value || !expiry.current.value)
           {  return}

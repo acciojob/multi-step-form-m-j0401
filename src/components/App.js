@@ -11,8 +11,8 @@ const App = () => {
   return (
     <div>
    {step==1  &&   <Step1 step={step} setStep={setStep}/>}    
-       {step==2 && <Step2 step={step} setStep={setStep}/>}
-     { step==3 && <Step3 step={step} setStep={setStep}/>}
+       {/* {step==2 && <Step2 step={step} setStep={setStep}/>}
+     { step==3 && <Step3 step={step} setStep={setStep}/>} */}
     </div>
   )
 }
