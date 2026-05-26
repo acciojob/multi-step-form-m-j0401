@@ -3,8 +3,8 @@ import React, { useRef,useState} from "react";
 
 
 
-const Step1=({setStep})=>{
-    //  let [step,setStep]=useState(1)
+const Steps=({step,setStep})=>{
+      let [step,setStep]=useState(1)
     
  let one={
     first:useRef(),
@@ -19,7 +19,7 @@ const Step1=({setStep})=>{
         { return;}
     setStep(2)
  }
-   return   <div id="step1">
+   return (      step==1 &&   <div id="step1"> 
             <h1>Customer Details</h1>
       <form>
                 <label>First Name:</label>
@@ -34,8 +34,8 @@ const Step1=({setStep})=>{
             </form>
   
         </div>
-    
+   )
 }
 
 
-export default Step1;
+export default Steps;

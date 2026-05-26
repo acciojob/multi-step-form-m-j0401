@@ -10,9 +10,9 @@ const App = () => {
  let [step,setStep]=useState(1)
   return (
     <div>
-     { step==1 && <Step1 setStep={setStep}/>}
-     {step==2 && <Step2 setStep={setStep}/>}
-     { step==3 && <Step3 setStep={setStep}/>}
+   {step==1  &&   <Step1 step={step} setStep={setStep}/>}    
+       {step==2 && <Step2 step={step} setStep={setStep}/>}
+     { step==3 && <Step3 step={step} setStep={setStep}/>}
     </div>
   )
 }
