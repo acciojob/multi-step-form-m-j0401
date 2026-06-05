@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import './../styles/App.css';
+//import './../styles/App.css';
 //import Step1 from "./Step1";
 import Steps from "./Steps";
 // import Step2 from "./Step2";

@@ -42,7 +42,7 @@ let [step,setStep]=useState(1)
     setStep(2)
  }
    return    <>
-   {   step!=1   ? <div style={{display:"none"}}> </div> :<div id="step1" style={{display:"block"}}>
+   {   step==1   ?<div id="step1" style={{display:"block"}}>
             <h1>Customer Details</h1>
       <form>
                 <label>First Name:</label>
@@ -57,9 +57,10 @@ let [step,setStep]=useState(1)
             </form>
   
         </div>
+        :<div style={{display:"none"}}> </div> 
 }
 
-      { step!=2   ? <div style={{display:"none"}}> </div> :<div id="step2" style={{display:"block"}} >
+      { step==2   ? <div id="step2" style={{display:"block"}} >
             <h1>Car Details</h1>
             <form  onSubmit={((e)=>{ e.preventDefault();  if(!firsts.current.value || !lasts.current.value) return; setStep(3)})}>
                 <label>Brand:</label>
@@ -74,8 +75,8 @@ let [step,setStep]=useState(1)
                 <button type="submit">Next</button>
 
             </form>
-        </div> }
-   {  step!=3   ? <div style={{display:"none"}}> </div> :<div id="step3" style={{display:"block"}}>
+        </div>  :<div style={{display:"none"}}> </div> }
+   {  step==3   ?  <div id="step3" style={{display:"block"}}>
             <h1>Card Details</h1>
             <form onSubmit={handleSubmitt}>
                 <label>Card Number:</label>
@@ -90,7 +91,7 @@ let [step,setStep]=useState(1)
                 <button type="submit">Submit</button>
 
             </form>
-        </div>
+        </div>  : <div style={{display:"none"}}> </div>
 }
    
 </>
