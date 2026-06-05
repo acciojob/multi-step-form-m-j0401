@@ -31,6 +31,8 @@ let [step,setStep]=useState(1)
          e.preventDefault();
          if(!num.current.value || !expiry.current.value)
            {  return}
+
+         setStep(1);
  
          }
          
