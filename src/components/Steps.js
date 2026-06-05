@@ -44,7 +44,7 @@ let [step,setStep]=useState(1)
     setStep(2)
  }
    return    <>
-   {   step==1   ?<div  style={{display:"block"}}>
+      <div  id="step1" style={{display:"block"}}>
             <h1>Customer Details</h1>
       <form>
                 <label>First Name:</label>
@@ -59,8 +59,8 @@ let [step,setStep]=useState(1)
             </form>
   
         </div>
-        :<div style={{display:"none"}} id="step1"> </div> 
-}
+      {/* //  :<div style={{display:"none"}} id="step1"> </div>  */}
+
 
       { step==2   ? <div  style={{display:"block"}} >
             <h1>Car Details</h1>
