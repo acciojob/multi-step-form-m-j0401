@@ -55,7 +55,7 @@ let [step,setStep]=useState(1)
                 <br/>
                 <input type="text" id="last_name" ref={last}/>
                 <br/>
-                <button type="button" onClick={handleSubmit}>Next</button>
+                <button type="submit" onClick={handleSubmit}>Next</button>
             </form>
   
         </div>
