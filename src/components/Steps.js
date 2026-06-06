@@ -90,7 +90,7 @@ let [step,setStep]=useState(1)
                 <input type="date" id="expiry_date"ref={expiry}/>
                 <br/>
     
-                <button type="submit">Submit</button>
+                <button type="submit">Next</button>
 
             </form>
         </div>  
