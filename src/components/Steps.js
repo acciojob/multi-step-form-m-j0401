@@ -74,7 +74,7 @@ let [step,setStep]=useState(1)
                 <input type="number" id="car_price" ref={lasts}/>
                 <br/>
                 <button type="button" onClick={()=>setStep(1)}>Previous</button>
-                <button type="submit">Next</button>
+                <button type="button">Next</button>
 
             </form>
         </div>  
@@ -90,7 +90,7 @@ let [step,setStep]=useState(1)
                 <input type="date" id="expiry_date"ref={expiry}/>
                 <br/>
     
-                <button type="submit">Next</button>
+                <button type="button">Next</button>
 
             </form>
         </div>  
