@@ -37,8 +37,8 @@ let [step,setStep]=useState(1)
          }
          
 
- function handleSubmit(e){
-    e.preventDefault();
+ function handleSubmit(){
+  //  e.preventDefault();
     if(!first.current.value || !last.current.value)
         { return;}
     setStep(2)
@@ -46,7 +46,7 @@ let [step,setStep]=useState(1)
    return    <>
      <div  id="step1" style={{display: step==1 ? 'block' :'none'}}>
             <h1>Customer Details</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
                 <label>First Name:</label>
                 <br/>
                 <input type="text" id="first_name" ref={first}/>
@@ -55,7 +55,7 @@ let [step,setStep]=useState(1)
                 <br/>
                 <input type="text" id="last_name" ref={last}/>
                 <br/>
-                <button type="button">Next</button>
+                <button type="button" onClick={handleSubmit}>Next</button>
             </form>
   
         </div>
@@ -64,7 +64,7 @@ let [step,setStep]=useState(1)
 
     <div id="step2"  style={{display: step==2 ? 'block' :'none'}} >
             <h1>Car Details</h1>
-            <form  onSubmit={((e)=>{ e.preventDefault();  if(!firsts.current.value || !lasts.current.value) return; setStep(3)})}>
+            <form>
                 <label>Brand:</label>
                 <br/>
                 <input type="text" id="model" ref={firsts}/>
@@ -74,7 +74,7 @@ let [step,setStep]=useState(1)
                 <input type="number" id="car_price" ref={lasts}/>
                 <br/>
                 <button type="button" onClick={()=>setStep(1)}>Previous</button>
-                <button type="button">Next</button>
+                <button type="button" onClick={(()=>{   if(!firsts.current.value || !lasts.current.value) return; setStep(3)})}>Next</button>
 
             </form>
         </div>  
@@ -90,7 +90,7 @@ let [step,setStep]=useState(1)
                 <input type="date" id="expiry_date"ref={expiry}/>
                 <br/>
     
-                <button type="button">Next</button>
+                <button type="submit">Submit</button>
 
             </form>
         </div>  
