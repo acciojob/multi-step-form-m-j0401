@@ -46,7 +46,7 @@ let [step,setStep]=useState(1)
    return    <>
      <div  id="step1" style={{display: step==1 ? 'block' :'none'}}>
             <h1>Customer Details</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
                 <label>First Name:</label>
                 <br/>
                 <input type="text" id="first_name" ref={first}/>
@@ -55,7 +55,7 @@ let [step,setStep]=useState(1)
                 <br/>
                 <input type="text" id="last_name" ref={last}/>
                 <br/>
-                <button type="submit" onClick={handleSubmit}>Next</button>
+                <button type="button">Next</button>
             </form>
   
         </div>
