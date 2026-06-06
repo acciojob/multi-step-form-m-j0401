@@ -67,11 +67,11 @@ let [step,setStep]=useState(1)
             <form  onSubmit={((e)=>{ e.preventDefault();  if(!firsts.current.value || !lasts.current.value) return; setStep(3)})}>
                 <label>Brand:</label>
                 <br/>
-                <input type="text" id="brand" ref={firsts}/>
+                <input type="text" id="model" ref={firsts}/>
                 <br/>
                 <label>Model:</label>
                 <br/>
-                <input type="text" id="model" ref={lasts}/>
+                <input type="number" id="car_price" ref={lasts}/>
                 <br/>
                 <button type="button" onClick={()=>setStep(1)}>Previous</button>
                 <button type="submit">Next</button>
