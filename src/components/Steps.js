@@ -32,8 +32,7 @@ let [step,setStep]=useState(1)
          if(!num.current.value || !expiry.current.value)
            {  return}
 
-         setStep(1);
- 
+       
          }
          
 
@@ -44,7 +43,7 @@ let [step,setStep]=useState(1)
     setStep(2)
  }
    return    <>
-     <div  id="step1" style={{display: step==1 ? 'block' :'block'}}>
+     <div  id="step1" style={{display: step===1 ? 'block' :'none'}}>
             <h1>Customer Details</h1>
       <form>
                 <label>First Name:</label>
@@ -62,7 +61,7 @@ let [step,setStep]=useState(1)
            
 
 
-    <div id="step2"  style={{display: step==2 ? 'block' :'none'}} >
+    <div id="step2"  style={{display: step===2 ? 'block' :'none'}} >
             <h1>Car Details</h1>
             <form>
                 <label>Brand:</label>
@@ -78,7 +77,7 @@ let [step,setStep]=useState(1)
 
             </form>
         </div>  
-     <div id="step3" style={{display: step==3 ? 'block' :'none'}}>
+     <div id="step3" style={{display: step===3 ? 'block' :'none'}}>
             <h1>Card Details</h1>
             <form onSubmit={handleSubmitt}>
                 <label>Card Number:</label>
