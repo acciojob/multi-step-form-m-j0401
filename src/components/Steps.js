@@ -44,7 +44,7 @@ let [step,setStep]=useState(1)
     setStep(2)
  }
    return    <>
-     <div  id="step1" style={{display: step==1 ? 'block' :'none'}}>
+     <div  id="step1" style={{display: step==1 ? 'block' :'block'}}>
             <h1>Customer Details</h1>
       <form>
                 <label>First Name:</label>
