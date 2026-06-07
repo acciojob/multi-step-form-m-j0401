@@ -27,8 +27,8 @@ let [step,setStep]=useState(1)
          expiry:useRef()
      }
      let {num,expiry}=sec
-     function handleSubmitt(e){
-         e.preventDefault();
+     function handleSubmitt(){
+         
          if(!num.current.value || !expiry.current.value)
            {  return}
 
@@ -79,7 +79,7 @@ let [step,setStep]=useState(1)
         </div>  
      <div id="step3" style={{display: step===3 ? 'block' :'none'}}>
             <h1>Card Details</h1>
-            <form onSubmit={handleSubmitt}>
+            <form>
                 <label>Card Number:</label>
                 <br/>
                 <input type="number" id="card_info" ref={num}/>
@@ -90,7 +90,7 @@ let [step,setStep]=useState(1)
   pattern="\d{4}-\d{2}-\d{2}" id="expiry_date"ref={expiry}/>
                 <br/>
     
-                <button type="submit">Submit</button>
+                <button type="button" onClick={handleSubmitt}>Submit</button>
 
             </form>
         </div>  
