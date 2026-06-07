@@ -86,7 +86,8 @@ let [step,setStep]=useState(1)
                 <br/>
                 <label>Expiry Date:</label>
                 <br/>
-                <input type="date" id="expiry_date"ref={expiry}/>
+                <input type="text"  placeholder="YYYY-MM-DD"
+  pattern="\d{4}-\d{2}-\d{2}" id="expiry_date"ref={expiry}/>
                 <br/>
     
                 <button type="submit">Submit</button>
